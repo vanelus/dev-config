@@ -1,6 +1,29 @@
-[alias] br = "!git branch $1"
-[alias] ci commit
-[alias] st status
-[alias] co checkout
-[alias] am commit --amend --no-edit
-[alias] cl clean -fd ; gi
+[core]
+	quotepath = false
+	safecrlf = warn
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	ignorecase = false
+	fileMode = false
+	autocrlf = false
+[push]
+	default = current
+[pull]
+	rebase = preserve
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+[user]
+	name = DESKTOP-BDDJNA9\\HP
+	email = njikekamgnia@gmail.com
+[credential "https://gitlab.com"]
+	provider = generic
+[alias] 
+	lg = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	br = branch
+	cl = "!git clean -fd ; git reset --hard"
+	am = "!git commit --amend --no-edit"
+	co = checkout
+	pu = pull
+	re = rebase 
+	fp = push --force-with-lease
