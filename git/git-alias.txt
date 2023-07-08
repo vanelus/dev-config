@@ -1,0 +1,6 @@
+[alias] br = "!git branch $1"
+[alias] ci commit
+[alias] st status
+[alias] co checkout
+[alias] am commit --amend --no-edit
+[alias] cl clean -fd ; gi
